@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_KT_!</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>   
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>   
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>   
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>   
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>   
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <button onclick="foo()">Добавить число</button>
+    </table>
+    <script>
+        i=0
+        array = []
+        while(true){
+            if  (array.length<30){
+                j = Math.round(Math.random() *100)
+                array.push(j)
+            }
+            else{
+                break
+            }
+        }
+        console.log(array,array.length)
+        let table = document.body.firstElementChild;
+        counter = 0
+            for (j=0;j<5;j++){
+                for (v=0;v<6;v++){
+                    table.rows[j].cells[v].textContent = array[counter]
+                    if (array[counter] >= 50){
+                        table.rows[j].cells[v].style.backgroundColor = "Orange"
+                    }
+                    counter ++
+                }
+                
+            }
+        function foo(){
+            let table = document.body.firstElementChild;
+            console.log(table)
+            j = Math.round(Math.random() *100)
+            table.rows[0].cells[0].textContent = j
+                    if (j >= 50){
+                        table.rows[0].cells[0].style.backgroundColor = "Orange"
+                    }
+                    else{
+                        table.rows[0].cells[0].style.backgroundColor = "White"
+                    }
+        }
+    </script>
+</body>
+</html>
